@@ -3,13 +3,42 @@
   "version": "0.0.1",
   "description": "a simple grammar for todolang",
   "main": "grammar.js",
+  "types": "bindings/node",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
   },
   "author": "",
   "license": "GPL-2.0",
   "devDependencies": {
     "nan": "^2.20.0",
-    "tree-sitter-cli": "^0.22.6"
-  }
+    "tree-sitter-cli": "^0.22.6",
+    "prebuildify": "^6.0.0"
+  },
+  "dependencies": {
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
+  "tree-sitter": [
+    {
+      "scope": "source.todolang",
+      "injection-regex": "^todolang$"
+    }
+  ]
 }
