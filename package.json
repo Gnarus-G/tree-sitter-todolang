@@ -1,0 +1,15 @@
+{
+  "name": "tree-sitter-todolang",
+  "version": "0.0.1",
+  "description": "a simple grammar for todolang",
+  "main": "grammar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "nan": "^2.20.0",
+    "tree-sitter-cli": "^0.22.6"
+  }
+}
