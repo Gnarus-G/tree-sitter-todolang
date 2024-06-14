@@ -2,25 +2,32 @@
   "name": "tree-sitter-todolang",
   "version": "0.0.1",
   "description": "a simple grammar for todolang",
-  "main": "grammar.js",
   "types": "bindings/node",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "node-gyp-build",
     "prebuildify": "prebuildify --napi --strip"
   },
-  "author": "",
+  "keywords": [
+    "parser",
+    "lexer",
+    "grammar",
+    "todolang",
+    "todo"
+  ],
+  "author": "Gnarus-G",
   "license": "GPL-2.0",
   "devDependencies": {
     "nan": "^2.20.0",
     "tree-sitter-cli": "^0.22.6",
-    "prebuildify": "^6.0.0"
+    "prebuildify": "^6.0.1"
   },
   "dependencies": {
-    "node-gyp-build": "^4.8.0"
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.1"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.21.0"
+    "tree-sitter": "^0.21.1"
   },
   "peerDependenciesMeta": {
     "tree_sitter": {
