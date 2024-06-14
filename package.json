@@ -38,6 +38,11 @@
   "tree-sitter": [
     {
       "scope": "source.todolang",
+      "file-types": [
+        "td",
+        "todo"
+      ],
+      "highlights": "./queries/highlights.scm",
       "injection-regex": "^todolang$"
     }
   ]
