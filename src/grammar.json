@@ -18,25 +18,59 @@
       ]
     },
     "todo_definition": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "todo"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "chars"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "todo"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "block"
+            }
+          ]
+        }
+      ]
+    },
+    "block": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
-          "value": "todo"
-        },
-        {
-          "type": "PATTERN",
-          "value": "\\s+"
+          "value": "{"
         },
         {
           "type": "SYMBOL",
-          "name": "text"
+          "name": "chars"
+        },
+        {
+          "type": "STRING",
+          "value": "}"
         }
       ]
     },
-    "text": {
-      "type": "PATTERN",
-      "value": ".*"
+    "chars": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\S"
+      }
     }
   },
   "extras": [

@@ -1,5 +1,25 @@
 [
   {
+    "type": "block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "chars",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "chars",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -23,18 +43,26 @@
       "required": true,
       "types": [
         {
-          "type": "text",
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "chars",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "text",
-    "named": true
+    "type": "todo",
+    "named": false
   },
   {
-    "type": "todo",
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
     "named": false
   }
 ]

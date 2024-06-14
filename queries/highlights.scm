@@ -1,2 +1,10 @@
 "todo" @keyword
-(text) @string
+
+(chars) @string
+
+[
+ "{"
+ "}"
+] @punctuation.bracket
+
+

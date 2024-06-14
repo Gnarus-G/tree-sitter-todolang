@@ -8,7 +8,8 @@ module.exports = grammar({
         $.todo_definition
         // TODO: more kinds of definitions
       ),
-    todo_definition: ($) => seq("todo", /\s+/, $.text),
-    text: (_) => /.*/,
+    todo_definition: ($) => choice(seq("todo", $.chars), seq("todo", $.block)),
+    block: ($) => seq("{", $.chars, "}"),
+    chars: (_) => repeat1(/\S/),
   },
 });
